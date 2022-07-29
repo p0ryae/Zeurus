@@ -3,6 +3,11 @@
     src: url('../assets/fonts/JetBrains\ Mono\ Regular\ Nerd\ Font\ Complete\ Mono.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: NotoSans;
+    src: url('../assets/fonts/NotoSans-Regular.ttf') format('truetype');
+}
+
 html,
 body,
 * {
@@ -11,7 +16,7 @@ body,
 }
 
 body {
-    background-color: #181A1F;
+    background-color: #1a1b20;
     color: white !important;
     user-select: none;
     overflow: hidden;
@@ -23,7 +28,8 @@ body {
     height: 34px;
     display: flex;
     align-content: center;
-    margin-left: 3px;
+    margin-left: 6px;
+    font-family: NotoSans;
 }
 
 .titlebar .main {
@@ -37,7 +43,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    margin-top: auto;
+    margin-top: 8px;
     margin-bottom: auto;
     color: rgb(185, 185, 185);
 }
@@ -47,8 +53,60 @@ body {
     cursor:default;
 }
 
+.titlebar-icons {
+    margin-right: 22px !important;
+    margin-bottom: 2px !important;
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.titlebar-exit {
+    border-radius: 50px;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 17px;
+    width: 17px;
+    margin-left: 6px;
+    background-color: rgb(70, 70, 70);
+    
+    display: block;
+}
+
+.titlebar-exit:hover {
+    background: #ff0000;
+}
+
+.titlebar-max {
+    border-radius: 50px;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 17px;
+    width: 17px;
+    background-color: rgb(70, 70, 70);
+    margin-left: 6px;
+    display: block;
+}
+
+.titlebar-max:hover {
+    background: #ffc400;
+}
+
+.titlebar-min {
+    border-radius: 50px;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 17px;
+    width: 17px;
+    background-color: rgb(70, 70, 70);
+    margin-left: 6px;
+    display: block;
+}
+
+.titlebar-min:hover {
+    background: #22ff00;
+}
+
 .SubCategory {
-    margin-top: 34px;
+    font-family: NotoSans;
+    margin-top: 42px;
     margin-left: 4px;
     display: none !important;
     position: absolute;
@@ -65,7 +123,7 @@ body {
 .SubCategory .sub {
     position: relative;
     margin-top: 7px;
-    color: white;
+    color: rgb(202, 202, 202);
     white-space: pre;
     font-size: 13px;
     margin-left: 8px;
@@ -79,7 +137,7 @@ body {
 }
 
 .SubCategory .sub:hover {
-    background-color: #2a2d32;
+    background-color: #2c2e32;
     cursor: pointer;
 }
 
@@ -96,7 +154,7 @@ body {
 .viewer {
     margin-top: 16px;
     position: absolute;
-    background-color: #1c1e23;
+    background-color: #1a1c20;
     color: white;
     white-space: normal !important;
     user-select: auto;
@@ -119,7 +177,6 @@ body {
 .format,
 .format pre,
 .format textarea {
-
     font-size: 14px !important;
     font-family: JetBrains;
 }

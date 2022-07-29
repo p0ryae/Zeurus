@@ -16,8 +16,8 @@
     </div>
 
     <div class="SubCategory" id="editSubCategory">
-      <div class="sub">...</div>
-      <div class="sub">...</div>
+      <div class="sub">Redo</div>
+      <div class="sub">Undo</div>
     </div>
 
     <div class="main" id="view">
@@ -32,6 +32,12 @@
     <div class="main" id="Info">
       Info
     </div>
+
+    <div class="titlebar-icons">
+      <div @click="minimize_window" class="titlebar-min mx-1"></div>
+      <div @click="maximize_window" class="titlebar-max mx-1"></div>
+      <div @click="quit_window" class="titlebar-exit mx-1"></div>
+    </div>
   </div>
 
   <div class="overlayDrop" id="overlayDrop"></div>
@@ -44,6 +50,17 @@ import listeners from './components/listeners.vue'
 export default {
   name: 'App',
   listeners,
+  methods: {
+    minimize_window() {
+      window.__TAURI__.window.appWindow.minimize()
+    },
+    maximize_window() {
+      window.__TAURI__.window.appWindow.toggleMaximize()
+    },
+    quit_window() {
+      window.__TAURI__.window.appWindow.close()
+    },
+  }
 }
 </script>
 
