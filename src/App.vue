@@ -15,19 +15,27 @@
       Edit
     </div>
 
+    <div class="SubCategory" id="editSubCategory">
+      <div class="sub">...</div>
+      <div class="sub">...</div>
+    </div>
+
     <div class="main" id="view">
       View
     </div>
 
-    <div class="main" id="about">
+    <div class="SubCategory" id="viewSubCategory">
+      <div class="sub" id="zoomIn">Zoom In</div>
+      <div class="sub" id="zoomOut">Zoom Out</div>
+    </div>
+
+    <div class="main" id="Info">
       Info
     </div>
   </div>
 
-  <div class="viewerDiv">
-    <textarea class="viewer" id="viewer" />
-
-  </div>
+  <div class="overlayDrop" id="overlayDrop"></div>
+  <textarea class="viewer" id="viewer" placeholder="Start typing or Open a file..." />
 
 </template>
 

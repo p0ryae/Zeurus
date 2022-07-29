@@ -35,7 +35,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.zeurus.config",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -62,12 +62,13 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 650,
         "resizable": true,
         "title": "Zeurus",
-        "width": 900,
+        "width": 850,
         "minHeight": 300,
-        "minWidth": 400
+        "minWidth": 400,
+        "fileDropEnabled": true
       }
     ]
   }

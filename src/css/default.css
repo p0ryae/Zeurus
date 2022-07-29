@@ -12,7 +12,7 @@ body,
 
 body {
     background-color: #181A1F;
-    color: white;
+    color: white !important;
     user-select: none;
     overflow: hidden;
     height: 100%;
@@ -44,35 +44,7 @@ body {
 
 .titlebar .main:hover {
     background-color: #2a2d32;
-    cursor: pointer;
-}
-
-.viewerDiv {
-    display: flex;
-
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-
-.viewer {
-    font-family: JetBrains;
-    margin-top: 16px;
-    position: absolute;
-    font-size: 14px;
-    background-color: #1c1e23;
-    color: white;
-    white-space: pre-wrap;
-    user-select: auto;
-    border: none;
-    outline: none;
-    resize: none !important;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    padding: 20px;
-    box-sizing: border-box;
+    cursor:default;
 }
 
 .SubCategory {
@@ -84,7 +56,7 @@ body {
     box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
     min-width: 100px;
     min-height: 132px;
-    border-radius: 4px;
+    border-radius: 6px;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -109,4 +81,125 @@ body {
 .SubCategory .sub:hover {
     background-color: #2a2d32;
     cursor: pointer;
+}
+
+#editSubCategory {
+    margin-left: 20px;
+    min-height: 70px;
+}
+
+#viewSubCategory {
+    margin-left: 60px;
+    min-height: 70px;
+}
+
+.viewer {
+    margin-top: 16px;
+    position: absolute;
+    background-color: #1c1e23;
+    color: white;
+    white-space: normal !important;
+    user-select: auto;
+    border: none;
+    outline: none;
+    resize: none !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.format,
+.format label {
+    padding: 20px;
+}
+
+.format,
+.format pre,
+.format textarea {
+
+    font-size: 14px !important;
+    font-family: JetBrains;
+}
+
+.format textarea {
+    color: transparent;
+    color: rgba(0, 0, 0, 0.004);
+    caret-color: rgb(255, 255, 255);
+}
+
+.format {
+    overflow: auto;
+    height: calc(100% - 50px);
+}
+
+.format pre {
+    margin: 0;
+    overflow: initial;
+}
+
+.format label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline;
+    box-sizing: border-box;
+    cursor: text;
+}
+
+.format textarea {
+    font-family: JetBrains;
+    border: 0;
+    background: 0;
+    outline: none;
+    resize: none;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.format .comment {
+    color: rgb(150, 150, 150);
+}
+
+.format .string {
+    color: rgb(76, 160, 76);
+}
+
+.format .number {
+    color: rgb(102, 249, 173);
+}
+
+.format .keyword {
+    color: rgb(255, 51, 92);
+}
+
+.format .variable {
+    color: cyan;
+}
+
+.format .define {
+    color: rgb(120, 120, 255);
+}
+
+
+
+.overlayDrop {
+    margin-top: 16px;
+    width: 100%;
+    height: 100%;
+    opacity:0.9;
+    position: absolute;
+    background-color: #787878;
+    z-index:1000;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    border-radius: 20px;
+    display: none;
 }
