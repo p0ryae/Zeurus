@@ -1,5 +1,5 @@
 <template>
-  <div class="titlebar" id="titlebar">
+  <div data-tauri-drag-region class="titlebar" id="titlebar">
     <div class="main" id="file">
       File
     </div>

@@ -61,6 +61,7 @@
     },
     "windows": [
       {
+        "label":"main",
         "fullscreen": false,
         "height": 650,
         "resizable": true,
@@ -68,7 +69,9 @@
         "width": 850,
         "minHeight": 300,
         "minWidth": 400,
-        "fileDropEnabled": true
+        "fileDropEnabled": true,
+        "decorations": false,
+        "center": true
       }
     ]
   }
