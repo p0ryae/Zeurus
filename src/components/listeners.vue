@@ -22,7 +22,7 @@ window.addEventListener("load", async function () {
     number: /0x[\dA-Fa-f]+|-?(\d+\.?\d*|\.\d+)|#[\dA-Fa-f]{3,6}/,
     comment: /\/\*([^\*]|[^\/])*(\*\/?)?|(\/\/|#)[^\r\n]*/,
     string: /"(\\.|[^"\r\n])*"?|'(\\.|[^'\r\n])*'?/,
-    keyword: /(and|as|case|catch|class|const|def|delete|die|do|else|elseif|esac|exit|extends|false|fi|finally|for|foreach|function|global|if|new|null|or|private|protected|public|published|resource|return|self|static|struct|switch|then|this|throw|true|try|var|void|while|xor|import|async)(?!\w|=)/,
+    keyword: /(div|and|as|case|catch|class|const|def|delete|die|do|else|elseif|esac|exit|extends|false|fi|finally|for|foreach|function|global|if|new|null|or|private|protected|public|published|resource|return|self|static|struct|switch|then|this|throw|true|try|var|void|while|xor|import|async)(?!\w|=)/,
     variable: /[\$\%\@](\->|\w)+(?!\w)|\${\w*}?/,
     define: /[$A-Z_a-z0-9]+/,
     op: /[\+\-\/=<>!]=?|[\(\)\{\}\[\]\.\|]/,
@@ -53,10 +53,6 @@ window.addEventListener("load", async function () {
         await fs.writeTextFile(savedFileLocation, document.getElementById("viewer").value)
         alert("Saved File!")
       }
-    }
-
-    if (a.ctrlKey && a.key.toLowerCase() === 'z') {
-      alert("Future Feature :(")
     }
 
     if (a.key == 'Tab') {
