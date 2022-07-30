@@ -16,17 +16,17 @@ fn main() {
               Ok(())
           })
           .run(tauri::generate_context!())
-          .expect("error while running lazap");
+          .expect("error while running zeurus");
   } else if cfg!(unix) {
       tauri::Builder::default()
           .invoke_handler(tauri::generate_handler![get_input, show_main_window])
           .run(tauri::generate_context!())
-          .expect("error while running lazap");
+          .expect("error while running zeurus");
   } else if cfg!(target_os = "macos") {
       tauri::Builder::default()
           .invoke_handler(tauri::generate_handler![get_input, show_main_window])
           .run(tauri::generate_context!())
-          .expect("error while running lazap");
+          .expect("error while running zeurus");
   }
 }
 
