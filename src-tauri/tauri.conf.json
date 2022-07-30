@@ -71,7 +71,8 @@
         "minWidth": 400,
         "fileDropEnabled": true,
         "decorations": false,
-        "center": true
+        "center": true,
+        "visible": false
       }
     ]
   }

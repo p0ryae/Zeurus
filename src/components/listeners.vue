@@ -11,6 +11,10 @@ const { textareaFormatter } = require("./modules/textareaFormat")
 const { Dissect } = require("./modules/dissect")
 
 window.addEventListener("load", async function () {
+  setTimeout(() => {
+      invoke('show_main_window');
+  }, 60);
+
   let savedFileLocation;
 
   let dissect = new Dissect({
