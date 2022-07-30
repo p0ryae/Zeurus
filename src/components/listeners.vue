@@ -13,7 +13,7 @@ const { Dissect } = require("./modules/dissect")
 window.addEventListener("load", async function () {
   setTimeout(() => {
     invoke('show_main_window');
-  }, 60);
+  }, 50);
 
   let savedFileLocation;
 
@@ -36,6 +36,7 @@ window.addEventListener("load", async function () {
       let readFile = await fs.readTextFile(args[1]);
       document.getElementById("viewer").value = `${readFile}`;
       formattedText.update()
+      document.getElementById("title").innerHTML = `${args[1].split('/').pop()}`
       savedFileLocation = args[1]
     }
   })
