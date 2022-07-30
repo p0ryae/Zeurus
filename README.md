@@ -25,6 +25,7 @@ If you'd like to compile Zeurus from source, please read the following: <br>
 
 **REQUIREMENTS**<br> 
 - node `v17` or higher (`v18.5` is tested on my end and seems to be the most compatible)<br>
+- All prerequisites in **[Here](https://tauri.app/v1/guides/getting-started/prerequisites/)**
 - yarn because npm bad.
 
 Once met requirements, do the following:
