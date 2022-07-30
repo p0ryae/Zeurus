@@ -45,7 +45,7 @@ body {
     font-size: 14px;
     margin-top: 8px;
     margin-bottom: auto;
-    color: rgb(185, 185, 185);
+    color: rgb(190, 190, 190);
 }
 
 .titlebar .main:hover {
@@ -110,35 +110,45 @@ body {
     margin-left: 4px;
     display: none !important;
     position: absolute;
-    background-color: #222429;
+    background-color: #232529;
     box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
-    min-width: 100px;
-    min-height: 132px;
+    width: 160px;
     border-radius: 6px;
     z-index: 10;
     display: flex;
-    justify-content: center;
 }
 
 .SubCategory .sub {
     position: relative;
-    margin-top: 7px;
-    color: rgb(202, 202, 202);
+    color: rgb(195, 195, 195);
     white-space: pre;
     font-size: 13px;
-    margin-left: 8px;
-    margin-right: 8px;
+    padding-left: 16px;
     border-radius: 4px;
     display: flex;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    height: 24px;
+    height: 34px;
+}
+
+.SubCategory .sub:first-child {
+    margin-top: 6px !important;
+}
+
+.SubCategory .sub:last-child {
+    margin-bottom: 6px !important;
+}
+
+.SubCategory .sub .hidden {
+    position: absolute;
+    color: rgb(159, 159, 159);
+    margin-left: 82px;
 }
 
 .SubCategory .sub:hover {
-    background-color: #2c2e32;
+    background-color: #33373e;
     cursor: pointer;
+    border-radius: 0px;
 }
 
 #editSubCategory {
@@ -240,10 +250,8 @@ body {
 }
 
 .format .define {
-    color: rgb(120, 120, 255);
+    color: rgb(100, 115, 255);
 }
-
-
 
 .overlayDrop {
     margin-top: 16px;

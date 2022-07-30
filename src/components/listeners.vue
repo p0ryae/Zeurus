@@ -52,11 +52,25 @@ window.addEventListener("load", async function () {
     }
 
     if (a.ctrlKey && a.key.toLowerCase() === 'z') {
-      console("Future Feature :(")
+      alert("Future Feature :(")
     }
 
     if (a.key == 'Tab') {
       a.preventDefault();
+    }
+  
+    if (a.ctrlKey && a.key === '=') {
+      a.preventDefault();
+      let getSize = window.getComputedStyle(document.getElementById("pre"), null).getPropertyValue("font-size");
+      document.getElementById("pre").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) + 1 + "px" + " !important;"}`
+      document.getElementById("viewer").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) + 1 + "px" + " !important;"}`
+    }
+
+    if (a.ctrlKey && a.key === '-') {
+      a.preventDefault();
+      let getSize = window.getComputedStyle(document.getElementById("pre"), null).getPropertyValue("font-size");
+      document.getElementById("pre").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) - 1 + "px" + " !important;"}`
+      document.getElementById("viewer").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) - 1 + "px" + " !important;"}`
     }
   });
 
@@ -178,7 +192,6 @@ window.addEventListener("load", async function () {
     document.getElementById("pre").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) + 1 + "px" + " !important;"}`
     document.getElementById("viewer").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) + 1 + "px" + " !important;"}`
   })
-
   document.getElementById("zoomOut").addEventListener('click', async function () {
     let getSize = window.getComputedStyle(document.getElementById("pre"), null).getPropertyValue("font-size");
     document.getElementById("pre").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) - 1 + "px" + " !important;"}`
