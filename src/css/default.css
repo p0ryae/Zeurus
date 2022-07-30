@@ -53,6 +53,17 @@ body {
     cursor: default;
 }
 
+.titlebar .title {
+    flex: 0 1 auto;
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
+    margin-top: 14px;
+    font-family: JetBrains;
+    font-size: 14px;
+    color: rgb(200, 200, 200);
+}
+
 .titlebar-icons {
     margin-right: 22px !important;
     margin-bottom: 2px !important;
@@ -120,7 +131,7 @@ body {
 
 .SubCategory .sub {
     position: relative;
-    color: rgb(195, 195, 195);
+    color: rgb(207, 207, 207);
     white-space: pre;
     font-size: 13px;
     padding-left: 16px;
@@ -176,7 +187,7 @@ body {
     border-radius: 14px;
     padding: 20px;
     box-sizing: border-box;
-
+    box-shadow: -1px -1px 8px -1px rgba(0, 0, 0, 0.34);
 }
 
 .format,

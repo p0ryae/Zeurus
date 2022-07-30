@@ -51,6 +51,10 @@
       Info
     </div>
 
+    <div class="title" id="title">
+      Untitled
+    </div>
+
     <div class="titlebar-icons">
       <div @click="minimize_window" class="titlebar-min mx-1"></div>
       <div @click="maximize_window" class="titlebar-max mx-1"></div>

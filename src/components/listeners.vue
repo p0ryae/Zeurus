@@ -12,7 +12,7 @@ const { Dissect } = require("./modules/dissect")
 
 window.addEventListener("load", async function () {
   setTimeout(() => {
-      invoke('show_main_window');
+    invoke('show_main_window');
   }, 60);
 
   let savedFileLocation;
@@ -62,7 +62,7 @@ window.addEventListener("load", async function () {
     if (a.key == 'Tab') {
       a.preventDefault();
     }
-  
+
     if (a.ctrlKey && a.key === '=') {
       a.preventDefault();
       let getSize = window.getComputedStyle(document.getElementById("pre"), null).getPropertyValue("font-size");
@@ -148,6 +148,7 @@ window.addEventListener("load", async function () {
     document.getElementById("viewer").value = "";
     formattedText.update()
     document.getElementById("fileSubCategory").style.cssText = ";display:none !important;";
+    document.getElementById("title").innerHTML = `Untitled`
   })
 
   document.getElementById("openFile").addEventListener('click', async function () {
@@ -162,6 +163,7 @@ window.addEventListener("load", async function () {
       document.getElementById("viewer").value = `${readFile}`;
       formattedText.update()
       document.getElementById("fileSubCategory").style.cssText = ";display:none !important;";
+      document.getElementById("title").innerHTML = `${selected.split('/').pop()}`
     } catch (err) {
       alert(err);
     }
@@ -175,10 +177,12 @@ window.addEventListener("load", async function () {
 
       await fs.writeTextFile(filePath, document.getElementById("viewer").value)
       document.getElementById("fileSubCategory").style.cssText = ";display:none !important;";
+      savedFileLocation = filePath
+      document.getElementById("title").innerHTML = `${filePath.split('/').pop()}`
     } else {
       await fs.writeTextFile(savedFileLocation, document.getElementById("viewer").value)
       document.getElementById("fileSubCategory").style.cssText = ";display:none !important;";
-      alert("Saved File!")
+      document.getElementById("title").innerHTML = `${savedFileLocation.split('/').pop()}`
     }
   })
 
@@ -189,6 +193,7 @@ window.addEventListener("load", async function () {
 
     await fs.writeTextFile(filePath, document.getElementById("viewer").value)
     document.getElementById("fileSubCategory").style.cssText = ";display:none !important;";
+    document.getElementById("title").innerHTML = `${filePath.split('/').pop()}`
   })
 
   document.getElementById("zoomIn").addEventListener('click', async function () {
