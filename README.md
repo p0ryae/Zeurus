@@ -22,14 +22,14 @@ Head over to the **[releases](https://github.com/DashCruft/Zeurus/releases)** an
 If you'd like to compile Zeurus from source, please read the following: <br>
 
 **REQUIREMENTS**<br> 
-- node `v17` or higher (`v18.5` is tested on my end and seems to be the most compatible)<br>
-- All prerequisites in **[Here](https://tauri.app/v1/guides/getting-started/prerequisites/)**
-- yarn because npm bad.
+
+- All prerequisites in **[here](https://tauri.app/v1/guides/getting-started/prerequisites/)**
+- yarn because npm bad (`npm i -g yarn`).
 
 Once met requirements, do the following:
+```shell
+$ git clone https://github.com/DashCruft/Zeurus.git && cd Zeurus
+$ yarn
 ```
-git clone https://github.com/DashCruft/Zeurus.git && cd Zeurus
-yarn install
-```
-To run Zeurus afterwards, do `yarn tauri:serve` 
+To run Zeurus afterwards, `yarn tauri:serve`.
 
