@@ -24,7 +24,7 @@ If you'd like to compile Zeurus from source, please read the following: <br>
 **REQUIREMENTS**<br> 
 
 - All prerequisites in **[here](https://tauri.app/v1/guides/getting-started/prerequisites/)**
-- yarn because npm bad (`npm i -g yarn`).
+- yarn because npm bad (`npm i -g yarn`)
 
 Once met requirements, do the following:
 ```shell
