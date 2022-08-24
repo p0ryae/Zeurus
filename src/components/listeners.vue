@@ -39,37 +39,49 @@ window.addEventListener("load", async function () {
     }
   })
 
-  document.addEventListener('keydown', async function (a) {
-    if (a.ctrlKey && a.key.toLowerCase() === 's') {
-      a.preventDefault();
+  document.addEventListener('keydown', async function (e) {
+    if (e.ctrlKey && e.key.toLowerCase() === 's') {
+      e.preventDefault();
       if (!savedFileLocation) {
         const filePath = await dialog.save({
           multiple: false,
         });
 
         await fs.writeTextFile(filePath, document.getElementById("viewer").value)
+        document.getElementById("title").innerHTML = `${filePath.split('/').pop()}`
       } else {
         await fs.writeTextFile(savedFileLocation, document.getElementById("viewer").value)
-        alert("Saved File!")
+        document.getElementById("title").innerHTML = `${savedFileLocation.split('/').pop()}`
       }
+
     }
 
-    if (a.key == 'Tab') {
-      a.preventDefault();
+    document.getElementById("viewer").addEventListener("input", function () {
+      if (!document.getElementById("title").innerHTML.includes(" *")) {
+        document.getElementById("title").insertAdjacentHTML('beforeend', " *")
+      }
+    });
+
+    if (e.key == 'Tab') {
+      e.preventDefault();
     }
 
-    if (a.ctrlKey && a.key === '=') {
-      a.preventDefault();
+    if (e.ctrlKey && e.key === '=') {
+      e.preventDefault();
       let getSize = window.getComputedStyle(document.getElementById("pre"), null).getPropertyValue("font-size");
       document.getElementById("pre").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) + 1 + "px" + " !important;"}`
       document.getElementById("viewer").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) + 1 + "px" + " !important;"}`
     }
 
-    if (a.ctrlKey && a.key === '-') {
-      a.preventDefault();
+    if (e.ctrlKey && e.key === '-') {
+      e.preventDefault();
       let getSize = window.getComputedStyle(document.getElementById("pre"), null).getPropertyValue("font-size");
       document.getElementById("pre").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) - 1 + "px" + " !important;"}`
       document.getElementById("viewer").style.cssText = `font-size: ${parseInt(getSize.replace("px", "")) - 1 + "px" + " !important;"}`
+    }
+
+    if (e.ctrlKey && e.key === "r") {
+      window.location.reload();
     }
   });
 
@@ -204,12 +216,6 @@ window.addEventListener("load", async function () {
 
   document.getElementById("Info").addEventListener('click', async function () {
     await shell.open('https://github.com/DashCruft/Hackathon');
-  })
-
-  document.addEventListener('keydown', async function (e) {
-    if (e.ctrlKey && e.key === "r") {
-      window.location.reload();
-    }
   })
 });
 </script>
