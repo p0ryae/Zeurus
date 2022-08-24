@@ -34,7 +34,7 @@ window.addEventListener("load", async function () {
       let readFile = await fs.readTextFile(args[1]);
       document.getElementById("viewer").value = `${readFile}`;
       formattedText.update()
-      document.getElementById("title").innerHTML = `${args[1].split('/').pop()}`
+      document.getElementById("title").innerHTML = `${args[1].replace(/^.*[\\\/]/, '')}`
       savedFileLocation = args[1]
     }
   })
@@ -48,10 +48,10 @@ window.addEventListener("load", async function () {
         });
 
         await fs.writeTextFile(filePath, document.getElementById("viewer").value)
-        document.getElementById("title").innerHTML = `${filePath.split('/').pop()}`
+        document.getElementById("title").innerHTML = `${filePath.replace(/^.*[\\\/]/, '')}`
       } else {
         await fs.writeTextFile(savedFileLocation, document.getElementById("viewer").value)
-        document.getElementById("title").innerHTML = `${savedFileLocation.split('/').pop()}`
+        document.getElementById("title").innerHTML = `${savedFileLocation.replace(/^.*[\\\/]/, '')}`
       }
 
     }
@@ -170,7 +170,7 @@ window.addEventListener("load", async function () {
       document.getElementById("viewer").value = `${readFile}`;
       formattedText.update()
       document.getElementById("fileSubCategory").style.cssText = ";display:none !important;";
-      document.getElementById("title").innerHTML = `${selected.split('/').pop()}`
+      document.getElementById("title").innerHTML = `${selected.replace(/^.*[\\\/]/, '')}`
     } catch (err) {
       alert(err);
     }
@@ -185,11 +185,11 @@ window.addEventListener("load", async function () {
       await fs.writeTextFile(filePath, document.getElementById("viewer").value)
       document.getElementById("fileSubCategory").style.cssText = ";display:none !important;";
       savedFileLocation = filePath
-      document.getElementById("title").innerHTML = `${filePath.split('/').pop()}`
+      document.getElementById("title").innerHTML = `${filePath.replace(/^.*[\\\/]/, '')}`
     } else {
       await fs.writeTextFile(savedFileLocation, document.getElementById("viewer").value)
       document.getElementById("fileSubCategory").style.cssText = ";display:none !important;";
-      document.getElementById("title").innerHTML = `${savedFileLocation.split('/').pop()}`
+      document.getElementById("title").innerHTML = `${savedFileLocation.replace(/^.*[\\\/]/, '')}`
     }
   })
 
@@ -200,7 +200,7 @@ window.addEventListener("load", async function () {
 
     await fs.writeTextFile(filePath, document.getElementById("viewer").value)
     document.getElementById("fileSubCategory").style.cssText = ";display:none !important;";
-    document.getElementById("title").innerHTML = `${filePath.split('/').pop()}`
+    document.getElementById("title").innerHTML = `${filePath.replace(/^.*[\\\/]/, '')}`
   })
 
   document.getElementById("zoomIn").addEventListener('click', async function () {
