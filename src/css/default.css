@@ -62,11 +62,7 @@ body {
     font-family: JetBrains;
     font-size: 13px;
     color: rgb(200, 200, 200);
-
-}
-
-.titlebar .title:hover {
-    cursor: default;
+    pointer-events: none;
 }
 
 .titlebar-icons {
@@ -126,7 +122,7 @@ body {
     margin-left: 4px;
     display: none !important;
     position: absolute;
-    background-color: #232529;
+    background-color: #1f2024;
     box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
     width: 160px;
     border-radius: 6px;
