@@ -18,7 +18,7 @@ window.addEventListener("load", async function () {
   let dissect = new Dissect({
     whitespace: /\s+/,
     number: /0x[\dA-Fa-f]+|-?(\d+\.?\d*|\.\d+)|#[\dA-Fa-f]{3,6}/,
-    comment: /\/\*([^\*]|[^\/])*(\*\/?)?|(\/\/|# |; )[^\r\n]*/,
+    comment: /\/\*([^\*]|[^\/])*(\*\/?)?|(\/\/|#|; )[^\r\n]*/,
     string: /"(\\.|[^"\r\n])*"?|'(\\.|[^'\r\n])*'?/,
     keyword: /(div|and|as|case|catch|class|const|def|delete|die|do|else|elseif|esac|exit|extends|false|fi|finally|for|foreach|function|global|if|new|null|or|private|protected|public|published|resource|return|self|static|struct|switch|then|this|throw|true|try|var|void|while|xor|import|async)(?!\w|=)/,
     variable: /[\$\%\@](\->|\w)+(?!\w)|\${\w*}?/,
