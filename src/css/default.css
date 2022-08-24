@@ -242,6 +242,10 @@ body {
     overflow: hidden;
 }
 
+.format {
+    color: rgb(210, 210, 210);
+}
+
 .format .comment {
     color: rgb(150, 150, 150);
 }
