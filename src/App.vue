@@ -69,8 +69,12 @@
 
 <script>
 import listeners from './components/listeners.vue'
+
 export default {
-  name: 'App',
+  async created() {
+    const os = window.__TAURI__.os;
+    console.info(`OS: ${await os.platform()} | Arch: ${await os.arch()}`);
+  },
   listeners,
   methods: {
     minimize_window() {

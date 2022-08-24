@@ -60,13 +60,17 @@ body {
     transform: translateX(-50%);
     margin-top: 14px;
     font-family: JetBrains;
-    font-size: 14px;
+    font-size: 13px;
     color: rgb(200, 200, 200);
+}
+
+.titlebar .title:hover {
+    cursor: default;
 }
 
 .titlebar-icons {
     margin-right: 22px !important;
-    margin-bottom: 2px !important;
+
     margin-left: auto;
     display: flex;
     align-items: flex-end;
@@ -279,13 +283,17 @@ body {
 ::-webkit-scrollbar-thumb {
     background: #63636396;
     border-radius: 10px;
+
+    border-right:2px solid transparent;
+    border-left:2px solid transparent;
+    border-top:2px solid transparent;
+    border-bottom:2px solid transparent;
+    background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #83838396;
-    height: 30px;
     border-radius: 10px;
-    width: 120px !important;
 }
 
 ::-webkit-scrollbar-track-piece {
