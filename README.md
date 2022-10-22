@@ -10,6 +10,11 @@
 Zeurus, a cross-platform blazingly fast code/text editor with Syntax Highlighting
 </p>
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/59381835/197365488-a87aa66d-f052-4e6f-860b-aac640b2f415.png" width="600px">
+
+</p>
+
 ## Installation
 
 Installing Zeurus is very straight forward.<br>
