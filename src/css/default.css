@@ -286,10 +286,10 @@ body {
     background: #63636396;
     border-radius: 10px;
 
-    border-right:2px solid transparent;
-    border-left:2px solid transparent;
-    border-top:2px solid transparent;
-    border-bottom:2px solid transparent;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     background-clip: padding-box;
 }
 
@@ -304,4 +304,9 @@ body {
 
 ::-webkit-scrollbar-corner {
     display: none;
+}
+
+::selection {
+    background: rgba(165, 165, 165, 0.2);
+    border-radius: 20px;
 }
