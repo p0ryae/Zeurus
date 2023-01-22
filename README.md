@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-Zeurus, a cross-platform blazingly fast code/text editor with Syntax Highlighting
+Zeurus, a cross-platform blazingly fast text editor with Syntax Highlighting
 </p>
 
 <p align="center">
